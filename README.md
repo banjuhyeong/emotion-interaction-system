@@ -106,7 +106,15 @@ https://github.com/moneyally/yua-encoder
 
 The interaction flow, GPT feedback structure, frontend/backend integration, and service implementation were independently extended for this project.
 
+## Service Screenshots
 
+### Main Interaction
+
+![main](assets/service_main.png)
+
+### Feedback Result
+
+![feedback](assets/service_feedback.png)
 ---
 
 # 5. 아래로 스크롤
@@ -116,4 +124,7 @@ The interaction flow, GPT feedback structure, frontend/backend integration, and 
 ```text id="8knmdo"
 Commit changes
 
+## Documents
+
+- [Modeling Log](docs/modeling_log.md)
 
