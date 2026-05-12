@@ -1,9 +1,6 @@
-````markdown
-# Emotion Interaction System
+Emotion Interaction System
 
 Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-based Interactive Feedback
-
-![workflow](assets/workflow.png)
 
 본 프로젝트는 비정형 얼굴 이미지 기반 감정 인식 모델을 활용해  
 상황과 감정 결과에 따라 서로 다른 피드백을 제공하는  
@@ -11,7 +8,7 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 ---
 
-# Project Overview
+Project Overview
 
 단순 감정 분류를 넘어,
 
@@ -24,9 +21,9 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 ---
 
-# System Workflow
+System Workflow
 
-### 전체 흐름
+전체 흐름
 
 사용자 입력  
 → 얼굴 전처리  
@@ -36,13 +33,11 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 ---
 
-# Service Implementation
+Service Implementation
 
-## Main Interaction Screen
+Main Interaction Screen
 
-![main](assets/service_main.png)
-
-### Features
+Features
 
 - GPT 기반 상황 제시
 - 감정 힌트 기능
@@ -51,11 +46,9 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 ---
 
-## Emotion Analysis Result
+Emotion Analysis Result
 
-![result](assets/service_result.png)
-
-### Output Information
+Output Information
 
 - 기대 감정 출력
 - 예측 감정 분석
@@ -64,11 +57,9 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 ---
 
-## Feedback Branching
+Feedback Branching
 
-![feedback](assets/service_feedback.png)
-
-### Feedback Logic
+Feedback Logic
 
 - 감정 일치 여부에 따라
   피드백 방향 변화
@@ -81,11 +72,9 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 ---
 
-## Final Summary
+Final Summary
 
-![summary](assets/service_summary.png)
-
-### Final Interaction Goal
+Final Interaction Goal
 
 - 반복형 감정 인터랙션
 - 감정 흐름 기록
@@ -94,9 +83,9 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 ---
 
-# Key Improvements
+Key Improvements
 
-## Emotion Interaction Expansion
+Emotion Interaction Expansion
 
 기존 단순 감정 분류 구조에서:
 
@@ -109,7 +98,7 @@ Emotion Classification
 
 ---
 
-## Threshold Calibration
+Threshold Calibration
 
 panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
 
@@ -121,7 +110,7 @@ panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
 
 ---
 
-## UX / UI Improvements
+UX / UI Improvements
 
 - 감정 힌트 기능
 - 카드형 피드백 UI
@@ -132,9 +121,9 @@ panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
 
 ---
 
-# Model Architecture
+Model Architecture
 
-## Core Models
+Core Models
 
 - Vision Transformer (ViT)
 - SigLIP
@@ -143,7 +132,7 @@ panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
 
 ---
 
-## Applied Techniques
+Applied Techniques
 
 - Ensemble Voting
 - Threshold Calibration
@@ -153,9 +142,9 @@ panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
 
 ---
 
-# Modeling Process
+Modeling Process
 
-## 1. Baseline
+1. Baseline
 
 초기 baseline은 ResNet50 기반 CNN 모델로 시작했습니다.
 
@@ -172,7 +161,7 @@ CNN 기반 구조만으로는:
 
 ---
 
-## 2. Transformer Backbone Expansion
+2. Transformer Backbone Expansion
 
 이후 Transformer 기반 구조를 도입했습니다.
 
@@ -199,7 +188,7 @@ CNN 기반 구조만으로는:
 
 ---
 
-## 3. Ensemble Structure
+3. Ensemble Structure
 
 단일 모델 한계를 극복하기 위해:
 
@@ -217,7 +206,7 @@ ViT + SigLIP + EfficientNet + ResNet
 
 ---
 
-# Final Performance
+Final Performance
 
 | Metric | Result |
 |---|---|
@@ -227,7 +216,7 @@ ViT + SigLIP + EfficientNet + ResNet
 
 ---
 
-# Tech Stack
+Tech Stack
 
 | Category | Stack |
 |---|---|
@@ -240,7 +229,7 @@ ViT + SigLIP + EfficientNet + ResNet
 
 ---
 
-# Environment
+Environment
 
 | Item | Version |
 |---|---|
@@ -250,9 +239,9 @@ ViT + SigLIP + EfficientNet + ResNet
 
 ---
 
-# Installation
+Installation
 
-## Backend
+Backend
 
 ```bash
 cd emotion-api
@@ -263,9 +252,9 @@ python -m venv venv
 venv\Scripts\activate
 
 pip install -r requirements.txt
-````
+```
 
-## Frontend
+Frontend
 
 ```bash
 cd emotion-react
@@ -275,7 +264,7 @@ npm install
 
 ---
 
-# OpenAI API Key Setup
+OpenAI API Key Setup
 
 프로젝트 실행 전 `.env` 파일 생성 필요
 
@@ -293,9 +282,9 @@ OPENAI_API_KEY=your_openai_api_key
 
 ---
 
-# Run Project
+Run Project
 
-## Backend 실행
+Backend 실행
 
 ```bash
 cd emotion-api
@@ -307,11 +296,13 @@ python app.py
 
 기본 실행 주소:
 
-[http://127.0.0.1:5000](http://127.0.0.1:5000)
+```text
+http://127.0.0.1:5000
+```
 
 ---
 
-## Frontend 실행
+Frontend 실행
 
 ```bash
 cd emotion-react
@@ -321,11 +312,13 @@ npm run dev
 
 기본 실행 주소:
 
-[http://localhost:5173](http://localhost:5173)
+```text
+http://localhost:5173
+```
 
 ---
 
-# Project Structure
+Project Structure
 
 | Folder        | Description                  |
 | ------------- | ---------------------------- |
@@ -336,51 +329,51 @@ npm run dev
 
 ---
 
-# Research Continuation
+Research Continuation
 
 본 프로젝트는 아래 공개 repository의 일부 모델링 구조와 inference pipeline 아이디어를 참고했습니다.
 
 Reference:
-[https://github.com/moneyally/yua-encoder](https://github.com/moneyally/yua-encoder)
+
+```text
+https://github.com/moneyally/yua-encoder
+```
 
 프로젝트 진행 과정에서:
 
-* 팀 참여 중단
-* 모델 실험 중단
-* repository 업데이트 중단
+- 팀 참여 중단
+- 모델 실험 중단
+- repository 업데이트 중단
 
 상황이 발생했습니다.
 
 이후:
 
-* threshold calibration
-* ensemble tuning
-* GPT interaction flow
-* Flask / React integration
-* multi-turn interaction structure
-* UX/UI interaction design
+- threshold calibration
+- ensemble tuning
+- GPT interaction flow
+- Flask / React integration
+- multi-turn interaction structure
+- UX/UI interaction design
 
 등을 별도로 연구 및 확장하여 프로젝트를 진행했습니다.
 
 ---
 
-# Future Improvements
+Future Improvements
 
-* Multi-turn interaction enhancement
-* Emotion flow tracking
-* Personalized GPT feedback
-* Real-time webcam inference
-* Expanded emotion categories
+- Multi-turn interaction enhancement
+- Emotion flow tracking
+- Personalized GPT feedback
+- Real-time webcam inference
+- Expanded emotion categories
 
 ---
 
-# Conclusion
+Conclusion
 
-본 프로젝트는 감정을 단순 분류 결과가 아닌
+본 프로젝트는 감정을 단순 분류 결과가 아닌  
 다음 상호작용을 위한 입력값으로 활용하는 것을 목표로 진행되었습니다.
 
-감정 인식 모델과 GPT 기반 피드백을 결합해
+감정 인식 모델과 GPT 기반 피드백을 결합해  
 사용자 경험 중심 인터랙션 구조를 구현했습니다.
-
-```
-```
