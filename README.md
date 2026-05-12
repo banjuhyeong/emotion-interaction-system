@@ -41,3 +41,78 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 [7] GPT 기반 감정 피드백 생성
     ↓
 [8] 결과 출력 및 다음 상호작용 진행
+
+Modeling
+Baseline
+ResNet50 baseline
+validation accuracy ≈ 0.36
+Backbone Expansion
+ViT
+EfficientNet
+SigLIP
+ResNet
+Final Ensemble
+ViT + SigLIP + EfficientNet + ResNet
+weighted ensemble
+threshold calibration
+TTA
+face crop
+Final Performance
+validation accuracy ≈ 0.8358
+panic / sadness confusion 개선
+Key Features
+Emotion-based interaction
+GPT feedback generation
+Threshold calibration
+Ensemble modeling
+Face crop preprocessing
+Interactive feedback flow
+Tech Stack
+Backend
+Flask
+Python
+OpenAI API
+Frontend
+React
+Vite
+AI / Deep Learning
+PyTorch
+TensorFlow
+Transformers
+ViT
+SigLIP
+EfficientNet
+Service Demo
+
+서비스 화면 및 workflow 이미지는 assets 폴더에 포함 예정.
+
+Additional Analysis
+confusion matrix analysis
+threshold calibration
+ensemble ablation
+latency benchmark
+GPT comparison
+Future Work
+반복형 감정 인터랙션 강화
+이전 감정 반응 기반 다음 상황 생성
+감정 흐름 분석 리포트 생성
+GPT 기반 동적 상호작용 확장
+Reference
+
+Some modeling workflows and inference pipeline ideas were referenced from:
+
+https://github.com/moneyally/yua-encoder
+
+The interaction flow, GPT feedback structure, frontend/backend integration, and service implementation were independently extended for this project.
+
+
+---
+
+# 5. 아래로 스크롤
+
+클릭:
+
+```text id="8knmdo"
+Commit changes
+
+
