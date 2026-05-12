@@ -100,12 +100,10 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 기존 단순 감정 분류 구조에서:
 
-```text
-Emotion Classification
-→ GPT Feedback
-→ Multi-turn Interaction
+Emotion Classification  
+→ GPT Feedback  
+→ Multi-turn Interaction  
 → Emotion Flow Tracking
-````
 
 구조로 확장했습니다.
 
@@ -115,9 +113,9 @@ Emotion Classification
 
 panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
 
-* confidence 기반 재판단
-* threshold tuning
-* class balance correction
+- confidence 기반 재판단
+- threshold tuning
+- class balance correction
 
 을 적용했습니다.
 
@@ -125,10 +123,10 @@ panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
 
 ## UX / UI Improvements
 
-* 감정 힌트 기능
-* 카드형 피드백 UI
-* 반복형 인터랙션 구조
-* 종합 감정 리포트
+- 감정 힌트 기능
+- 카드형 피드백 UI
+- 반복형 인터랙션 구조
+- 종합 감정 리포트
 
 기능을 추가했습니다.
 
@@ -138,20 +136,20 @@ panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
 
 ## Core Models
 
-* Vision Transformer (ViT)
-* SigLIP
-* EfficientNet
-* ResNet50
+- Vision Transformer (ViT)
+- SigLIP
+- EfficientNet
+- ResNet50
 
 ---
 
 ## Applied Techniques
 
-* Ensemble Voting
-* Threshold Calibration
-* MTCNN Face Crop
-* EXIF Orientation Normalize
-* Test Time Augmentation (TTA)
+- Ensemble Voting
+- Threshold Calibration
+- MTCNN Face Crop
+- EXIF Orientation Normalize
+- Test Time Augmentation (TTA)
 
 ---
 
@@ -163,14 +161,12 @@ panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
 
 초기 성능:
 
-```text
 val_acc ≈ 0.36
-```
 
 CNN 기반 구조만으로는:
 
-* 감정 간 관계 표현
-* 미묘한 표정 차이 구분
+- 감정 간 관계 표현
+- 미묘한 표정 차이 구분
 
 에 한계가 존재했습니다.
 
@@ -182,24 +178,22 @@ CNN 기반 구조만으로는:
 
 적용 backbone:
 
-* ViT
-* SigLIP
-* EfficientNet
-* ResNet
+- ViT
+- SigLIP
+- EfficientNet
+- ResNet
 
 특히 ViT 구조를 통해:
 
-* 전역 관계 표현
-* 얼굴 전체 분위기 학습
-* 감정 간 관계 표현
+- 전역 관계 표현
+- 얼굴 전체 분위기 학습
+- 감정 간 관계 표현
 
 을 강화했습니다.
 
 단일 모델 성능:
 
-```text
 ≈ 0.72
-```
 
 까지 향상되었습니다.
 
@@ -209,97 +203,50 @@ CNN 기반 구조만으로는:
 
 단일 모델 한계를 극복하기 위해:
 
-```text
 ViT + SigLIP + EfficientNet + ResNet
-```
 
 구조 기반 weighted ensemble을 적용했습니다.
 
 추가 적용:
 
-* threshold calibration
-* TTA
-* face crop
-* augmentation
-* learning rate tuning
-
----
-
-## 4. Misclassification Analysis
-
-주요 오분류 패턴:
-
-```text
-panic / sadness → anger
-```
-
-특히:
-
-```text
-panic → anger : 57 cases
-```
-
-문제를 확인했습니다.
-
----
-
-## 5. Threshold Calibration
-
-anger confidence가 특정 threshold 이하일 경우:
-
-```text
-panic / sadness
-```
-
-를 재비교하는 후처리 구조를 적용했습니다.
-
-이를 통해:
-
-* anger bias 감소
-* panic/sadness balance 개선
-
-효과를 확인했습니다.
+- threshold calibration
+- TTA
+- face crop
+- augmentation
+- learning rate tuning
 
 ---
 
 # Final Performance
 
-| Metric            | Result                          |
-| ----------------- | ------------------------------- |
-| Final Accuracy    | 0.8358                          |
-| Validation Images | 1200                            |
-| Classes           | anger / happy / panic / sadness |
-
----
-
-# Main Improvements
-
-* panic / sadness confusion reduction
-* anger bias mitigation
-* threshold-based probability recalibration
+| Metric | Result |
+|---|---|
+| Final Accuracy | 0.8358 |
+| Validation Images | 1200 |
+| Classes | anger / happy / panic / sadness |
 
 ---
 
 # Tech Stack
 
-| Category       | Stack                       |
-| -------------- | --------------------------- |
-| Frontend       | React + Vite                |
-| Backend        | Flask                       |
-| AI Framework   | PyTorch / TensorFlow        |
-| Model          | ViT / SigLIP / EfficientNet |
-| Face Detection | MTCNN                       |
-| API            | OpenAI GPT API              |
+| Category | Stack |
+|---|---|
+| Frontend | React + Vite |
+| Backend | Flask |
+| AI Framework | PyTorch / TensorFlow |
+| Model | ViT / SigLIP / EfficientNet |
+| Face Detection | MTCNN |
+| API | OpenAI GPT API |
 
 ---
 
 # Environment
 
-| Item    | Version |
-| ------- | ------- |
-| Python  | 3.10    |
-| Node.js | 18+     |
-| npm     | 9+      |
+| Item | Version |
+|---|---|
+| Python | 3.10 |
+| Node.js | 18+ |
+| npm | 9+ |
 
 ---
 
@@ -316,9 +263,7 @@ python -m venv venv
 venv\Scripts\activate
 
 pip install -r requirements.txt
-```
-
----
+````
 
 ## Frontend
 
@@ -362,9 +307,7 @@ python app.py
 
 기본 실행 주소:
 
-```text
-http://127.0.0.1:5000
-```
+[http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 ---
 
@@ -378,9 +321,7 @@ npm run dev
 
 기본 실행 주소:
 
-```text
-http://localhost:5173
-```
+[http://localhost:5173](http://localhost:5173)
 
 ---
 
@@ -397,12 +338,10 @@ http://localhost:5173
 
 # Research Continuation
 
-본 프로젝트는 아래 공개 repository의 일부 모델링 구조와
-inference pipeline 아이디어를 참고했습니다.
+본 프로젝트는 아래 공개 repository의 일부 모델링 구조와 inference pipeline 아이디어를 참고했습니다.
 
 Reference:
-
-* [https://github.com/moneyally/yua-encoder](https://github.com/moneyally/yua-encoder)
+[https://github.com/moneyally/yua-encoder](https://github.com/moneyally/yua-encoder)
 
 프로젝트 진행 과정에서:
 
@@ -422,17 +361,6 @@ Reference:
 * UX/UI interaction design
 
 등을 별도로 연구 및 확장하여 프로젝트를 진행했습니다.
-
-특히:
-
-```text
-Emotion Interaction
-→ GPT Feedback Branching
-→ Multi-turn Interaction
-→ Emotion Flow Tracking
-```
-
-구조를 중심으로 확장했습니다.
 
 ---
 
