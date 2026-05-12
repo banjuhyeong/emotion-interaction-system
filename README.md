@@ -1,6 +1,8 @@
-Emotion Interaction System
+# Emotion Interaction System
 
 Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-based Interactive Feedback
+
+![workflow](assets/workflow.png)
 
 본 프로젝트는 비정형 얼굴 이미지 기반 감정 인식 모델을 활용해  
 상황과 감정 결과에 따라 서로 다른 피드백을 제공하는  
@@ -8,7 +10,7 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 ---
 
-Project Overview
+# Project Overview
 
 단순 감정 분류를 넘어,
 
@@ -21,7 +23,7 @@ Project Overview
 
 ---
 
-System Workflow
+# System Workflow
 
 전체 흐름
 
@@ -33,11 +35,13 @@ System Workflow
 
 ---
 
-Service Implementation
+# Service Implementation
 
-Main Interaction Screen
+## Main Interaction Screen
 
-Features
+![main](assets/service_main.png)
+
+### Features
 
 - GPT 기반 상황 제시
 - 감정 힌트 기능
@@ -46,9 +50,11 @@ Features
 
 ---
 
-Emotion Analysis Result
+# Emotion Analysis Result
 
-Output Information
+![result](assets/service_result.png)
+
+### Output Information
 
 - 기대 감정 출력
 - 예측 감정 분석
@@ -57,9 +63,11 @@ Output Information
 
 ---
 
-Feedback Branching
+# Feedback Branching
 
-Feedback Logic
+![feedback](assets/service_feedback.png)
+
+### Feedback Logic
 
 - 감정 일치 여부에 따라
   피드백 방향 변화
@@ -72,9 +80,11 @@ Feedback Logic
 
 ---
 
-Final Summary
+# Final Summary
 
-Final Interaction Goal
+![summary](assets/service_summary.png)
+
+### Final Interaction Goal
 
 - 반복형 감정 인터랙션
 - 감정 흐름 기록
@@ -83,9 +93,9 @@ Final Interaction Goal
 
 ---
 
-Key Improvements
+# Key Improvements
 
-Emotion Interaction Expansion
+## Emotion Interaction Expansion
 
 기존 단순 감정 분류 구조에서:
 
@@ -98,7 +108,7 @@ Emotion Classification
 
 ---
 
-Threshold Calibration
+## Threshold Calibration
 
 panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
 
@@ -110,7 +120,7 @@ panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
 
 ---
 
-UX / UI Improvements
+## UX / UI Improvements
 
 - 감정 힌트 기능
 - 카드형 피드백 UI
@@ -121,9 +131,9 @@ UX / UI Improvements
 
 ---
 
-Model Architecture
+# Model Architecture
 
-Core Models
+## Core Models
 
 - Vision Transformer (ViT)
 - SigLIP
@@ -132,7 +142,7 @@ Core Models
 
 ---
 
-Applied Techniques
+## Applied Techniques
 
 - Ensemble Voting
 - Threshold Calibration
@@ -142,9 +152,9 @@ Applied Techniques
 
 ---
 
-Modeling Process
+# Modeling Process
 
-1. Baseline
+## 1. Baseline
 
 초기 baseline은 ResNet50 기반 CNN 모델로 시작했습니다.
 
@@ -161,7 +171,7 @@ CNN 기반 구조만으로는:
 
 ---
 
-2. Transformer Backbone Expansion
+## 2. Transformer Backbone Expansion
 
 이후 Transformer 기반 구조를 도입했습니다.
 
@@ -188,7 +198,7 @@ CNN 기반 구조만으로는:
 
 ---
 
-3. Ensemble Structure
+## 3. Ensemble Structure
 
 단일 모델 한계를 극복하기 위해:
 
@@ -206,7 +216,7 @@ ViT + SigLIP + EfficientNet + ResNet
 
 ---
 
-Final Performance
+# Final Performance
 
 | Metric | Result |
 |---|---|
@@ -216,7 +226,7 @@ Final Performance
 
 ---
 
-Tech Stack
+# Tech Stack
 
 | Category | Stack |
 |---|---|
@@ -229,7 +239,7 @@ Tech Stack
 
 ---
 
-Environment
+# Environment
 
 | Item | Version |
 |---|---|
@@ -239,9 +249,9 @@ Environment
 
 ---
 
-Installation
+# Installation
 
-Backend
+## Backend
 
 ```bash
 cd emotion-api
@@ -254,7 +264,9 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Frontend
+---
+
+## Frontend
 
 ```bash
 cd emotion-react
@@ -264,7 +276,7 @@ npm install
 
 ---
 
-OpenAI API Key Setup
+# OpenAI API Key Setup
 
 프로젝트 실행 전 `.env` 파일 생성 필요
 
@@ -282,9 +294,9 @@ OPENAI_API_KEY=your_openai_api_key
 
 ---
 
-Run Project
+# Run Project
 
-Backend 실행
+## Backend 실행
 
 ```bash
 cd emotion-api
@@ -302,7 +314,7 @@ http://127.0.0.1:5000
 
 ---
 
-Frontend 실행
+## Frontend 실행
 
 ```bash
 cd emotion-react
@@ -318,7 +330,7 @@ http://localhost:5173
 
 ---
 
-Project Structure
+# Project Structure
 
 | Folder        | Description                  |
 | ------------- | ---------------------------- |
@@ -329,7 +341,7 @@ Project Structure
 
 ---
 
-Research Continuation
+# Research Continuation
 
 본 프로젝트는 아래 공개 repository의 일부 모델링 구조와 inference pipeline 아이디어를 참고했습니다.
 
@@ -360,7 +372,7 @@ https://github.com/moneyally/yua-encoder
 
 ---
 
-Future Improvements
+# Future Improvements
 
 - Multi-turn interaction enhancement
 - Emotion flow tracking
@@ -370,7 +382,7 @@ Future Improvements
 
 ---
 
-Conclusion
+# Conclusion
 
 본 프로젝트는 감정을 단순 분류 결과가 아닌  
 다음 상호작용을 위한 입력값으로 활용하는 것을 목표로 진행되었습니다.
