@@ -1,9 +1,9 @@
-````markdown id="n4kl5w"
-![workflow](assets/workflow.png)
-
+````markdown
 # Emotion Interaction System
 
 Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-based Interactive Feedback
+
+![workflow](assets/workflow.png)
 
 본 프로젝트는 비정형 얼굴 이미지 기반 감정 인식 모델을 활용해  
 상황과 감정 결과에 따라 서로 다른 피드백을 제공하는  
@@ -395,7 +395,7 @@ http://localhost:5173
 
 ---
 
-# Reference & Research Continuation
+# Research Continuation
 
 본 프로젝트는 아래 공개 repository의 일부 모델링 구조와
 inference pipeline 아이디어를 참고했습니다.
@@ -404,7 +404,7 @@ Reference:
 
 * [https://github.com/moneyally/yua-encoder](https://github.com/moneyally/yua-encoder)
 
-다만 프로젝트 진행 과정에서:
+프로젝트 진행 과정에서:
 
 * 팀 참여 중단
 * 모델 실험 중단
@@ -414,24 +414,25 @@ Reference:
 
 이후:
 
-* 모델 구조 확장
 * threshold calibration
 * ensemble tuning
 * GPT interaction flow
-* Flask / React 서비스 구현
-* 반복형 인터랙션 구조 설계
+* Flask / React integration
+* multi-turn interaction structure
+* UX/UI interaction design
 
-등은 별도로 연구 및 확장하여 프로젝트를 진행했습니다.
+등을 별도로 연구 및 확장하여 프로젝트를 진행했습니다.
 
 특히:
 
-* emotion interaction structure
-* GPT feedback branching
-* multi-turn interaction flow
-* threshold-based correction
-* UX/UI interaction design
+```text
+Emotion Interaction
+→ GPT Feedback Branching
+→ Multi-turn Interaction
+→ Emotion Flow Tracking
+```
 
-부분은 프로젝트 방향에 맞게 추가 구현했습니다.
+구조를 중심으로 확장했습니다.
 
 ---
 
