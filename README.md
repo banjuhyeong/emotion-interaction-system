@@ -116,7 +116,9 @@ The interaction flow, GPT feedback structure, frontend/backend integration, and 
 
 ![feedback](assets/service_feedback.png)
 ---
+## Documents
 
+- [Modeling Log](docs/modeling_log.md)
 # 5. 아래로 스크롤
 
 클릭:
