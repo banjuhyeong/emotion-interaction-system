@@ -20,7 +20,7 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 ---
 
 ## System Workflow
-![Uploading workflow.png…]()
+![workflow](assets/workflow.png)
 
 ```text
 [1] GPT 상황 생성
