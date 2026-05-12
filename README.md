@@ -1,4 +1,6 @@
 ````markdown
+![workflow](assets/workflow.png)
+
 # Emotion Interaction System
 
 Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-based Interactive Feedback
