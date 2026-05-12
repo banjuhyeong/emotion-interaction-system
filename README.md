@@ -1,4 +1,4 @@
-````markdown
+````markdown id="n4kl5w"
 ![workflow](assets/workflow.png)
 
 # Emotion Interaction System
@@ -26,8 +26,6 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 # System Workflow
 
-![workflow](assets/workflow.png)
-
 ### 전체 흐름
 
 사용자 입력  
@@ -38,22 +36,122 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 ---
 
+# Service Implementation
+
+## Main Interaction Screen
+
+![main](assets/service_main.png)
+
+### Features
+
+- GPT 기반 상황 제시
+- 감정 힌트 기능
+- 사용자 이미지 업로드
+- 반복형 인터랙션 구조
+
+---
+
+## Emotion Analysis Result
+
+![result](assets/service_result.png)
+
+### Output Information
+
+- 기대 감정 출력
+- 예측 감정 분석
+- confidence score 제공
+- 감정 기반 피드백 생성
+
+---
+
+## Feedback Branching
+
+![feedback](assets/service_feedback.png)
+
+### Feedback Logic
+
+- 감정 일치 여부에 따라
+  피드백 방향 변화
+
+- 공감 / 긍정 강화 /
+  감정 상태 고려 반응 생성
+
+- 이전 감정 흐름 기반
+  상호작용 확장 고려
+
+---
+
+## Final Summary
+
+![summary](assets/service_summary.png)
+
+### Final Interaction Goal
+
+- 반복형 감정 인터랙션
+- 감정 흐름 기록
+- 종합 감정 피드백 제공
+- 사용자 참여 강화
+
+---
+
+# Key Improvements
+
+## Emotion Interaction Expansion
+
+기존 단순 감정 분류 구조에서:
+
+```text
+Emotion Classification
+→ GPT Feedback
+→ Multi-turn Interaction
+→ Emotion Flow Tracking
+````
+
+구조로 확장했습니다.
+
+---
+
+## Threshold Calibration
+
+panic / sadness가 anger로 집중되는 문제를 해결하기 위해:
+
+* confidence 기반 재판단
+* threshold tuning
+* class balance correction
+
+을 적용했습니다.
+
+---
+
+## UX / UI Improvements
+
+* 감정 힌트 기능
+* 카드형 피드백 UI
+* 반복형 인터랙션 구조
+* 종합 감정 리포트
+
+기능을 추가했습니다.
+
+---
+
 # Model Architecture
 
-### Core Models
+## Core Models
 
-- Vision Transformer (ViT)
-- SigLIP
-- EfficientNet
-- ResNet50
+* Vision Transformer (ViT)
+* SigLIP
+* EfficientNet
+* ResNet50
 
-### Applied Techniques
+---
 
-- Ensemble Voting
-- Threshold Calibration
-- MTCNN Face Crop
-- EXIF Orientation Normalize
-- Test Time Augmentation (TTA)
+## Applied Techniques
+
+* Ensemble Voting
+* Threshold Calibration
+* MTCNN Face Crop
+* EXIF Orientation Normalize
+* Test Time Augmentation (TTA)
 
 ---
 
@@ -67,7 +165,7 @@ Hybrid Facial Emotion Recognition with Ensemble, Threshold Calibration, and GPT-
 
 ```text
 val_acc ≈ 0.36
-````
+```
 
 CNN 기반 구조만으로는:
 
@@ -172,69 +270,13 @@ panic / sadness
 | Validation Images | 1200                            |
 | Classes           | anger / happy / panic / sadness |
 
-### Main Improvements
+---
+
+# Main Improvements
 
 * panic / sadness confusion reduction
 * anger bias mitigation
 * threshold-based probability recalibration
-
----
-
-# Service Implementation
-
-## Main Interaction Screen
-
-![main](assets/service_main.png)
-
-### Features
-
-* GPT 기반 상황 제시
-* 감정 힌트 기능
-* 사용자 이미지 업로드
-* 반복형 인터랙션 구조
-
----
-
-## Emotion Analysis Result
-
-![result](assets/service_result.png)
-
-### Output Information
-
-* 기대 감정 출력
-* 예측 감정 분석
-* confidence score 제공
-* 감정 기반 피드백 생성
-
----
-
-## Feedback Branching
-
-![feedback](assets/service_feedback.png)
-
-### Feedback Logic
-
-* 감정 일치 여부에 따라
-  피드백 방향 변화
-
-* 공감 / 긍정 강화 /
-  감정 상태 고려 반응 생성
-
-* 이전 감정 흐름 기반
-  상호작용 확장 고려
-
----
-
-## Final Summary
-
-![summary](assets/service_summary.png)
-
-### Final Interaction Goal
-
-* 반복형 감정 인터랙션
-* 감정 흐름 기록
-* 종합 감정 피드백 제공
-* 사용자 참여 강화
 
 ---
 
@@ -320,7 +362,7 @@ python app.py
 
 기본 실행 주소:
 
-```bash
+```text
 http://127.0.0.1:5000
 ```
 
@@ -336,58 +378,20 @@ npm run dev
 
 기본 실행 주소:
 
-```bash
+```text
 http://localhost:5173
-```
-
----
-
-# Requirements
-
-### Python Packages
-
-```bash
-flask
-flask-cors
-openai
-python-dotenv
-pillow
-numpy
-torch
-torchvision
-transformers
-tensorflow
-opencv-python
-facenet-pytorch
 ```
 
 ---
 
 # Project Structure
 
-```bash
-emotion-interaction-system
-├── emotion-api
-│   ├── app.py
-│   ├── predict.py
-│   ├── models/
-│   ├── uploads/
-│   └── .env
-│
-├── emotion-react
-│   ├── src/
-│   ├── public/
-│   └── assets/
-│
-├── assets
-│   ├── workflow.png
-│   ├── service_main.png
-│   ├── service_result.png
-│   ├── service_feedback.png
-│   └── service_summary.png
-│
-└── README.md
-```
+| Folder        | Description                  |
+| ------------- | ---------------------------- |
+| emotion-api   | Flask backend                |
+| emotion-react | React frontend               |
+| assets        | Workflow / service images    |
+| docs          | Modeling & project documents |
 
 ---
 
