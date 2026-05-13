@@ -381,6 +381,34 @@ https://github.com/moneyally/yua-encoder
 - Expanded emotion categories
 
 ---
+# Model Weights
+
+Due to GitHub file size limitations, model weight files are not included in this repository.
+
+Model weights were managed separately during the project due to server-based training and large file sizes.
+
+This project uses an ensemble-based emotion recognition pipeline composed of:
+
+- ResNet50
+- EfficientNet
+- Vision Transformer (ViT)
+- SigLIP
+
+Required model files:
+
+- exp02_resnet50_ft_crop_aug.h5
+- exp04_effnet_ft_balanced.h5
+- exp05_vit_b16_two_stage.pt
+- exp09_siglip_kd_tsoff_T4_a07_uf4.pt
+- ensemble_with_kd.json
+
+Place all files under:
+
+models/
+
+The final inference pipeline loads the ensemble configuration through:
+
+predict.py
 
 # Conclusion
 
