@@ -412,8 +412,6 @@ predict.py
 
 # Conclusion
 
-![Uploading image.png…]()
-
 
 본 프로젝트는 감정을 단순 분류 결과가 아닌  
 다음 상호작용을 위한 입력값으로 활용하는 것을 목표로 진행되었습니다.
@@ -426,4 +424,4 @@ predict.py
 
 Project presentation slides and demo video:
 
-[View Canva Presentation]((https://www.canva.com/design/DAHHFsDaKds/QSTJeOQx3I_2eNREPj7nzQ/edit))
+[View Canva Presentation](https://www.canva.com/design/DAHHFsDaKds/QSTJeOQx3I_2eNREPj7nzQ/edit)
